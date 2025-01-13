@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                fontSize: {
+                    '2xl': '1.2rem'
+
+
+                },
+                extend: {
+                    colors: {
+                        bege: '#040641',
+                        azul: '#2C2184',
+                        verde: '#718D68',
+                    },
+
+                    backgroundImage: {
+                        home: "url('/src/img/fundo.svg')"
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-bege">
+    <header class="w-full h-12 fixed bg-bege  ">
+        <nav class="flex items-center justify-between w-full mx-auto">
+            <div>
+                <img src="" alt="">
+            </div>
+
+            <div
+                class="nav-links bg-nav transition-all duration-700 ease-in-out md:static absolute md:min-h-fit min-h-[50vh] left-0 top-0 md:w-auto w-full flex items-center px-5 py-2 md:opacity-100 translate-y-[-100%] md:translate-y-0">
+                <ul class="text-black mx-auto flex md:flex-row flex-col md:items-center md:gap-[3vw]  text-center">
+                    <li><a class="text-2xl text-white hover:text-verde transition-colors duration-300" href="">Sobre</a>
+                    </li>
+                    <li><a class="text-2xl text-white hover:text-verde transition-colors duration-300" href="">Skill</a>
+                    </li>
+                    <li><a class="text-2xl text-white hover:text-verde transition-colors duration-300"
+                            href="">Projeto</a></li>
+                    <li><a class="text-2xl text-white hover:text-verde transition-colors duration-300"
+                            href="">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="flex items-center gap-6 ">
+
+            <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+        </div>
+
+
+    </header>
+
+    <section
+        class="w-full h bg-no-repeat bg-cover bg-center bg-home flex flex-col md:flex-row items-center md:items-start md:justify-center">
+        <!-- Texto -->
+        <div class="mx-9 px-5 pt-5 mt-10 text-center md:text-left">
+            <h1 class="text-[30px] md:text-[37px] text-white font-bold">NATANAEL PANTOJA</h1>
+            <h2 class="text-[23px] md:text-[30px] text-white">SOU DESENVOLVEDOR FRONT-END</h2>
+        </div>
+        <!-- Imagem -->
+        <div class=" mt-10 md:mt-5 mb-1">
+            <img class="w-full max-w-[300px] max-h-60 md:max-h-64 md:max-w-[450px] mt-10 mr-16"
+                src="/src/img/natanael.svg" alt="Natanael">
+        </div>
+    </section>
+
+    <!--INICIO DE SOBRE-->
+    <h1 class="text-white text-[30px] sm:text-[37px] font-bold text-center mt-9 mb-6">SOBRE</h1>
+
+    <section
+        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16 scroll-mt-32 pt-5 items-center md:items-center">
+
+        <div class="text-white text-lg md:text-base px-6 py-8 max-w-3xl mx-auto leading-relaxed">
+            <p>
+                Sou estudante de Análise e Desenvolvimento de Sistemas, atualmente no terceiro semestre. Durante meu
+                último emprego,
+                comecei a me aproximar pela área de TI, o que despertou meu interesse e me motivou a buscar novos
+                desafios nesse universo.
+            </p>
+            <br>
+            <p>
+                Hoje, estou me aprofundando em desenvolvimento frontend, com experiência em HTML, CSS, JavaScript,
+                Bootstrap e Tailwind, e sempre buscando me atualizar e aprender novas tecnologias. Além disso, gosto de
+                transformar ideias em projetos funcionais e visualmente atraentes, como você pode conferir em alguns dos
+                trabalhos que desenvolvi e estão disponíveis aqui no meu portfólio.
+            </p>
+            <br>
+            <p>
+                Estou empolgado com as possibilidades que o setor de tecnologia oferece e motivado a contribuir com
+                soluções criativas e eficientes. Se quiser saber mais sobre o que faço ou discutir possíveis
+                colaborações, fique à vontade para entrar em contato!
+            </p>
+        </div>
+
+
+        <!--BOTÕES -->
+        <article class="flex flex-col gap-4 sm:flex-row md:flex-col md:gap-10 mx-auto">
+
+            <button
+                class="text-white bg-verde w-36 md:w-40 h-8 mr-2 flex items-center justify-between mx-auto rounded p-3">LINKEDIN
+                <img src="/src/img/icons/linkedin.svg" alt="LINKEDIN">
+            </button>
+
+            <button
+                class="text-white bg-verde w-36 md:w-40 h-8 mr-2 flex items-center justify-between mx-auto rounded p-3">GITHUB
+                <img src="/src/img/icons/github.svg" alt="GITHUB">
+            </button>
+
+            <button
+                class="text-white bg-verde w-36 md:w-40 h-8 mr-2 flex items-center justify-between mx-auto rounded p-3">CURRÍCULO
+                <img src="/src/img/icons/curriculo.svg" alt="CURRICULO">
+            </button>
+
+        </article>
+    </section>
+
+
+
+    <section class="w-full h-96 bg-white ">
+
+        <h1 class="text-black text-[30px] sm:text-[37px] font-bold text-center mt-9 mb-6">SKILL</h1>
+
+        <article class="flex justify-center gap-4 sm:flex-row md:flex-row md:gap-5 md:mx-auto ">
+            <img class="w-16 h-16 md:w-[90px] md:h-[90px] " src="/src/img/icons/html.svg" alt="html">
+            <img class="w-16 h-16 md:w-[90px] md:h-[90px] " src="/src/img/icons/css.svg" alt="css">
+            <img class="w-16 h-16 md:w-[90px] md:h-[90px] " src="/src/img/icons/js.svg" alt="javascript">
+            <img class="w-16 h-16 md:w-[90px] md:h-[90px] " src="/src/img/icons/bootstrap.svg" alt="bootstrap">
+            <img class="w-16 h-16 md:w-[90px] md:h-[90px] " src="/src/img/icons/tailwind.svg" alt="tailwindcss">
+        </article>
+
+    </section>
+
+
+
+    <footer>
+
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
